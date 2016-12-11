@@ -1,0 +1,7 @@
+rm -f ./out.csv
+I=65536
+for J in {1..10}
+do
+  ./cacti $I 8
+  I=$((I*2))
+done

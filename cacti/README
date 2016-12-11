@@ -1,0 +1,24 @@
+CACTI command line format:
+
+cacti C A
+
+where,
+
+C            = Capacity of cache or plain RAM (in bytes)
+A            = Associativity (Enter 0 for full associativity)
+
+-------------------------------------------------------------------------------
+
+Partial output data from CACTI is written into the out.csv file. Please modify
+output_data_csv function in io.c to suit your needs.
+
+
+-------------------------------------------------------------------------------
+By default, CACTI calls 4 worker threads to compute the area/power/delay of
+valid cache configurations.  If you would like to call more worker threads,
+make it with
+
+  make NTHREADS=N
+
+where N is the number of worker threads.
+
